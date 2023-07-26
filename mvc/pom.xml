@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!--Defines the XML schema used to define the extensible tags-->
+	<!--Defines the fundamental structure and elements of the Maven POM-->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	<!--This is a spring-boot setup for Maven-->
+		<!--Spring Boot group ID (reversed web address)-->
+		<groupId>org.springframework.boot</groupId>
+		<!--Specifies a module or a project developed under a given group ID-->
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--Version of the project associated with the artifactId-->
+		<version>3.1.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<!--My project groupId-->
+	<groupId>com.developerdevz</groupId>
+	<!--My project artifact-->
+	<artifactId>mvc</artifactId>
+	<!--Project version-->
+	<version>0.0.1-SNAPSHOT</version>
+	<!--Project Name-->
+	<name>mvc</name>
+	<!--Project Description-->
+	<description>Project aimed at better understanding MVC in Java Spring Framework</description>
+
+	<properties>
+		<!--Jave Version-->
+		<java.version>20</java.version>
+	</properties>
+	<dependencies>
+		<!--Thymeleaf dependency from spring-boot-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!--Web dependency from spring-boot-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!--Dependancy for spring-boot testing library-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!--Dev Tools dependency from spring-boot: provides development tools and utilities such as -->
+		<!--Automatic restart, Life reload, Remote development, Disable template caching, -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!--Mave plugin for spring-boot-->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!--includes spring-boot:run, repackage, start, stop, build-info, -->
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
